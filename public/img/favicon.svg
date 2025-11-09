@@ -1,0 +1,16 @@
+<svg aria-labelledby="title desc" role="img" viewBox="187.2 54.054054054054056 262.8 212.61261261261262" xmlns="http://www.w3.org/2000/svg" style="max-height: 500px" width="262.8" height="212.61261261261262">
+  <title>Webnith — Logo (Light, Brand + Accent)</title>
+  <desc id="desc">Left bracket in electric cyan; right bracket and wordmark in brand blue #1E3A8A.</desc>
+  <defs>
+    <style>
+      .l{fill:none;stroke:#00E5FF;stroke-linecap:round;stroke-linejoin:round;stroke-width:28}
+      .r{fill:none;stroke:#1E3A8A;stroke-linecap:round;stroke-linejoin:round;stroke-width:28}
+      .w{fill:#1E3A8A;font:700 120px 'Poppins','Montserrat','Inter',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;letter-spacing:.5px}
+    </style>
+  </defs>
+  <g transform="translate(120,60)">
+    <path d="M180 20 100 100 180 180" class="l"/>
+    <path d="M220 20 300 100 220 180" class="r"/>
+  </g>
+  <text y="200" x="460" class="w">Webnith</text>
+</svg>
