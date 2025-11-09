@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" role="img" aria-labelledby="title desc">
+  <title id="title">Webnith — Logo 2025 (Gradient Flow)</title>
+  <desc id="desc">Modern gradient logo with primary blue to purple to teal flow.</desc>
+  <defs>
+    <linearGradient id="leftBracket" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2446e6;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#7b3dff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00e6c3;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="rightBracket" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7b3dff;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#ff914d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00e6c3;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#2446e6;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#7b3dff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2446e6;stop-opacity:1" />
+    </linearGradient>
+    <style>
+      .l{fill:none;stroke:url(#leftBracket);stroke-linecap:round;stroke-linejoin:round;stroke-width:28}
+      .r{fill:none;stroke:url(#rightBracket);stroke-linecap:round;stroke-linejoin:round;stroke-width:28}
+      .w{fill:url(#textGrad);font:700 120px 'Poppins','Montserrat','Inter',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;letter-spacing:.5px}
+    </style>
+  </defs>
+  <g transform="translate(120,60)">
+    <path class="l" d="M180 20 100 100 180 180"/>
+    <path class="r" d="M220 20 300 100 220 180"/>
+  </g>
+  <text class="w" x="460" y="200" dominant-baseline="middle">Webnith</text>
+</svg>

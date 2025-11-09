@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import Button from '../ui/Button'
+import { ReactNode } from 'react'
 
 interface ServiceHeroProps {
   eyebrow: string
@@ -13,9 +14,11 @@ interface ServiceHeroProps {
     href: string
     variant: 'primary' | 'secondary' | 'ghost' | 'outline'
   }>
+  icon?: ReactNode
+  image?: string
 }
 
-export default function ServiceHero({ eyebrow, title, description, services, ctaButtons }: ServiceHeroProps) {
+export default function ServiceHero({ eyebrow, title, description, services, ctaButtons, icon, image }: ServiceHeroProps) {
   return (
     <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden pt-24">
       {/* Animated Background */}
@@ -110,17 +113,60 @@ export default function ServiceHero({ eyebrow, title, description, services, cta
               transition={{ duration: 0.8, delay: 0.3 }}
               className="relative"
             >
-              <div className="glass-dark rounded-3xl p-8 backdrop-blur-2xl">
-                <div className="aspect-square rounded-2xl bg-gradient-to-br from-neon-blue/20 via-neon-purple/20 to-neon-pink/20 flex items-center justify-center">
-                  <div className="text-8xl">⚡</div>
+              {/* Ambient glow effects */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-brand-purple/10 to-accent/10 rounded-3xl blur-3xl" />
+              
+              {/* Main glass container */}
+              <div className="relative glass-dark rounded-3xl p-8 backdrop-blur-2xl border border-white/5 shadow-2xl">
+                {/* Inner glow border */}
+                <div className="absolute inset-0 rounded-3xl bg-gradient-to-br from-primary/20 via-transparent to-accent/20 opacity-50" />
+                
+                {/* Icon/Image container */}
+                <div className="relative aspect-square rounded-2xl bg-gradient-to-br from-midnight via-midnight to-deep-space flex items-center justify-center overflow-hidden">
+                  {image ? (
+                    <>
+                      {/* Image display */}
+                      <div className="absolute inset-0 flex items-center justify-center p-8">
+                        <img 
+                          src={image} 
+                          alt={title}
+                          className="w-full h-full object-contain relative z-10"
+                        />
+                      </div>
+                      {/* Subtle glow behind image */}
+                      <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-brand-purple/10 to-accent/10 blur-2xl" />
+                    </>
+                  ) : (
+                    <>
+                      {/* Animated background pattern */}
+                      <div className="absolute inset-0 opacity-10">
+                        <div className="absolute inset-0 bg-gradient-to-br from-primary via-brand-purple to-accent animate-pulse" 
+                             style={{ animationDuration: '4s' }} />
+                      </div>
+                      
+                      {/* Radial gradient overlay */}
+                      <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-midnight/80" />
+                      
+                      {/* Icon */}
+                      <div className="relative z-10">
+                        {icon || <div className="text-8xl">⚡</div>}
+                      </div>
+                    </>
+                  )}
                 </div>
               </div>
-              {/* Floating elements */}
-              <div className="absolute -top-6 -right-6 w-20 h-20 glass rounded-2xl flex items-center justify-center text-3xl animate-float">
-                🎨
+
+              {/* Corner accent indicators - subtle and professional */}
+              <div className="absolute -top-2 -right-2 w-4 h-4">
+                <div className="w-full h-full rounded-full bg-gradient-to-br from-primary to-brand-purple shadow-[0_0_20px_rgba(36,70,230,0.6)] animate-pulse" />
               </div>
-              <div className="absolute -bottom-6 -left-6 w-16 h-16 glass rounded-2xl flex items-center justify-center text-2xl animate-float-delayed">
-                🚀
+              <div className="absolute -bottom-2 -left-2 w-4 h-4">
+                <div className="w-full h-full rounded-full bg-gradient-to-br from-brand-purple to-accent shadow-[0_0_20px_rgba(123,61,255,0.6)] animate-pulse" 
+                     style={{ animationDelay: '1s' }} />
+              </div>
+              <div className="absolute -top-2 -left-2 w-3 h-3">
+                <div className="w-full h-full rounded-full bg-gradient-to-br from-accent to-brand-teal shadow-[0_0_15px_rgba(255,145,77,0.6)] animate-pulse" 
+                     style={{ animationDelay: '0.5s' }} />
               </div>
             </motion.div>
           </div>

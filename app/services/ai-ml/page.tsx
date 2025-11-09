@@ -11,7 +11,7 @@ import { motion } from 'framer-motion'
 export default function AIMLPage() {
   return (
     <>
-      <ServiceHero {...aimlHeroData} />
+      <ServiceHero {...aimlHeroData} image="/img/AI.png" />
       <WhySection
         title="Why Choose Our AI & ML Solutions"
         subtitle="Transform your business with intelligent, data-driven solutions."

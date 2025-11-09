@@ -11,7 +11,7 @@ import { motion } from 'framer-motion'
 export default function ChatbotPage() {
   return (
     <>
-      <ServiceHero {...chatbotHeroData} />
+      <ServiceHero {...chatbotHeroData} image="/img/chatbot.png" />
       <WhySection
         title="Why Choose Our Chatbot Solutions"
         subtitle="Intelligent automation that works 24/7 to grow your business."

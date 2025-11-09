@@ -11,7 +11,7 @@ import { webDesignHeroData, webDesignWhyData, webDesignProcessData, webDesignFAQ
 export default function WebDesignPage() {
   return (
     <>
-      <ServiceHero {...webDesignHeroData} />
+      <ServiceHero {...webDesignHeroData} image="/img/web-design.png" />
       <WhySection
         title="Why Choose Webnith for Web Design & Development"
         subtitle="Get the upside of a truly custom site—brand-first visuals, UX mapped to your buyer journey, reusable components, and integrations that fit your stack—without template bloat or lock-in."

@@ -11,7 +11,7 @@ import { motion } from 'framer-motion'
 export default function BusinessIntelligencePage() {
   return (
     <>
-      <ServiceHero {...biHeroData} />
+      <ServiceHero {...biHeroData} image="/img/business intelligence.png" />
       <WhySection
         title="Why Choose Our BI Solutions"
         subtitle="Turn data into your competitive advantage."

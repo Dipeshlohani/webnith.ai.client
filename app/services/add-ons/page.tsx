@@ -3,6 +3,7 @@
 import ServiceHero from '../../components/sections/ServiceHero'
 import WhySection from '../../components/sections/WhySection'
 import CTASection from '../../components/sections/CTASection'
+import { AddOnsIcon } from '../../components/ui/ServiceIcons'
 import { addOnsHeroData, addOnsWhyData, addOnsPopularData, addOnsHowItWorksData } from '../../data/add-ons'
 import { homeCTAData } from '../../data/homepage'
 import { motion } from 'framer-motion'
@@ -10,7 +11,7 @@ import { motion } from 'framer-motion'
 export default function AddOnsPage() {
   return (
     <>
-      <ServiceHero {...addOnsHeroData} />
+      <ServiceHero {...addOnsHeroData} icon={<AddOnsIcon />} />
       <WhySection
         title="Why Choose Our Add-Ons"
         subtitle="Flexible, modular features that grow with your business."

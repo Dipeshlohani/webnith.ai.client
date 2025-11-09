@@ -32,19 +32,18 @@ export default function Header() {
         initial={{ y: -100 }}
         animate={{ y: 0 }}
         transition={{ duration: 0.6, ease: 'easeOut' }}
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-          isScrolled ? 'glass shadow-xl' : 'bg-transparent'
-        }`}
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'glass shadow-xl' : 'bg-transparent'
+          }`}
       >
         <nav className="container mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
             {/* Logo */}
             <Link href="/" className="flex items-center group">
-              <div className="relative w-10 h-10">
-                <img 
-                  src="/img/logo.svg" 
-                  alt="Webnith Logo" 
-                  className="w-full h-full transition-transform duration-300 group-hover:scale-110"
+              <div className="relative w-32 h-auto">
+                <img
+                  src="/img/logo2.svg"
+                  alt="Webnith Logo"
+                  className="w-full h-auto transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
             </Link>
@@ -54,9 +53,9 @@ export default function Header() {
               <Link href="/" className="text-white/80 hover:text-white transition-colors link-underline">
                 Home
               </Link>
-              
+
               {/* Services Dropdown */}
-              <div 
+              <div
                 className="relative"
                 onMouseEnter={() => setIsServicesOpen(true)}
                 onMouseLeave={() => setIsServicesOpen(false)}
@@ -67,7 +66,7 @@ export default function Header() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
                 </button>
-                
+
                 <AnimatePresence>
                   {isServicesOpen && (
                     <motion.div
@@ -152,7 +151,7 @@ export default function Header() {
                 >
                   Home
                 </Link>
-                
+
                 <div className="space-y-4">
                   <p className="text-xl font-bold text-white/60 text-center">Services</p>
                   {services.map((service, index) => (

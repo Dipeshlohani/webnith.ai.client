@@ -37,11 +37,11 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="space-y-6">
             <Link href="/" className="inline-flex items-center group">
-              <div className="relative w-10 h-10">
+              <div className="relative w-28 h-auto">
                 <img 
                   src="/img/logo.svg" 
                   alt="Webnith Logo" 
-                  className="w-full h-full transition-transform duration-300 group-hover:scale-110"
+                  className="w-full h-auto transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
             </Link>

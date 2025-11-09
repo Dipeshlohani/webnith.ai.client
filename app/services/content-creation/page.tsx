@@ -11,7 +11,7 @@ import { motion } from 'framer-motion'
 export default function ContentCreationPage() {
   return (
     <>
-      <ServiceHero {...contentCreationHeroData} />
+      <ServiceHero {...contentCreationHeroData} image="/img/content-creation.png" />
       <WhySection
         title="Why Choose Our Content Creation Service"
         subtitle="Compelling copy that converts visitors into customers."
